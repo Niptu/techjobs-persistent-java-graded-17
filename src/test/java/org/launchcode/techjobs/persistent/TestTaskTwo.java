@@ -10,9 +10,11 @@ import jakarta.validation.constraints.Size;
 import mockit.Expectations;
 import mockit.Mocked;
 import org.junit.jupiter.api.Test;
-import org.launchcode.techjobs.persistent.controllers.EmployerController;
+import org.launchcode.techjobs.persistent.controllers.SkillController;
 import org.launchcode.techjobs.persistent.models.Employer;
 import org.launchcode.techjobs.persistent.models.Skill;
+import org.launchcode.techjobs.persistent.models.data.EmployerRepository;
+import org.launchcode.techjobs.persistent.models.data.SkillRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
@@ -382,7 +384,7 @@ public class TestTaskTwo extends AbstractTest {
         }};
 
         Model model = new ExtendedModelMap();
-        EmployerController employerController = new EmployerController();
+        SkillController employerController = new SkillController();
         Field employerRepositoryField = employerControllerClass.getDeclaredField("employerRepository");
         employerRepositoryField.setAccessible(true);
         employerRepositoryField.set(employerController, employerRepository);
@@ -407,7 +409,7 @@ public class TestTaskTwo extends AbstractTest {
         }};
 
         Model model = new ExtendedModelMap();
-        EmployerController employerController = new EmployerController();
+        SkillController employerController = new SkillController();
         Field employerRepositoryField = employerControllerClass.getDeclaredField("employerRepository");
         employerRepositoryField.setAccessible(true);
         employerRepositoryField.set(employerController, employerRepository);
@@ -427,7 +429,7 @@ public class TestTaskTwo extends AbstractTest {
         }};
 
         Model model = new ExtendedModelMap();
-        EmployerController employerController = new EmployerController();
+        SkillController employerController = new SkillController();
         Field employerRepositoryField = employerControllerClass.getDeclaredField("employerRepository");
         employerRepositoryField.setAccessible(true);
         employerRepositoryField.set(employerController, employerRepository);
