@@ -20,8 +20,7 @@ public class SkillController {
 
     @GetMapping("/")
     public String index(Model model) {
-        Iterable<Skill> skills = skillRepository.findAll();
-        model.addAttribute("skill", skills);
+        model.addAttribute("skills", skillRepository.findAll());
         return "skills/index";
     }
     @GetMapping("add")
